@@ -30,27 +30,26 @@ public class Yahtzee
       return diceValues;
   }
   public String summarize() {
+      this.summarizedNumbers = "";
       int i = 0;
       while (i < 5) {
           if (dice[i] == 1) {
               one += 1;
-          }
-          if (dice[i] == 2) {
+          } else if (dice[i] == 2) {
               two += 1;
-          }
-          if (dice[i] == 1) {
+          } else if (dice[i] == 3) {
               three += 1;
-          }
-          if (dice[i] == 4) {
+          } else if (dice[i] == 4) {
               four += 1;
-          }
-          if (dice[i] == 5) {
+          } else if (dice[i] == 5) {
               five += 1;
+          } else {
+              six += 1;
           }
           i++;
       }
       this.summarizedNumbers = "1-" + one + "; 2-" + two + "; 3-" + three 
-          + "; 4-" + four + "; 5-" + five;
+          + "; 4-" + four + "; 5-" + five + "; 6-" + six;
       return summarizedNumbers;
   }
 }
