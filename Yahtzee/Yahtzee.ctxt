@@ -8,4 +8,6 @@ comment3.params=dieNumber
 comment3.target=void\ roll(int)
 comment4.params=
 comment4.target=java.lang.String\ toString()
-numComments=5
+comment5.params=
+comment5.target=java.lang.String\ summarize()
+numComments=6
