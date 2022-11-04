@@ -1,23 +1,24 @@
 public class Yahtzee
 {
-  private int value;
+  private Die6 dieValue;
   private int[] dice = new int[5];
   private String diceValues;
   private String summarizedNumbers;
-  private int one = 0;
-  private int two = 0;
-  private int three = 0;
-  private int four = 0;
-  private int five = 0;
-  private int six = 0;
+  private int one;
+  private int two;
+  private int three;
+  private int four;
+  private int five;
+  private int six;
   public Yahtzee() {
       this.roll();
   }
   public void roll() {
       int i = 0;
+      dieValue = new Die6();
         while (i < 5) {
-        this.value = (int)(Math.random() * 6) + 1;
-        this.dice[i] = value;
+        dieValue.roll();
+        this.dice[i] = dieValue.getValue();
         i++;
       }
   }
@@ -31,6 +32,12 @@ public class Yahtzee
   }
   public String summarize() {
       this.summarizedNumbers = "";
+      one = 0;
+      two = 0;
+      three = 0;
+      four = 0;
+      five = 0;
+      six = 0;
       int i = 0;
       while (i < 5) {
           if (dice[i] == 1) {
