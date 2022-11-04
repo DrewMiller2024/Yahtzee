@@ -23,7 +23,7 @@ public class Yahtzee
       }
   }
   public void roll(int dieNumber) {
-      this.dice[dieNumber - 1] = (int)(Math.random() * 6) + 1;
+      this.dice[dieNumber - 1] = dieValue.rollAndGetValue();
   }
   public String toString() {
       this.diceValues = "{" + dice[0] + ", " + dice[1] + ", " + dice[2] 
