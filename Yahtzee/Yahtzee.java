@@ -16,10 +16,10 @@ public class Yahtzee
   public void roll() {
       int i = 0;
       dieValue = new Die6();
-        while (i < 5) {
-        dieValue.roll();
-        this.dice[i] = dieValue.getValue();
-        i++;
+      while (i < 5) {
+          dieValue.roll();
+          this.dice[i] = dieValue.getValue();
+          i++;
       }
   }
   public void roll(int dieNumber) {
